@@ -54,5 +54,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Deploy (force rollout)
         run: |
-          helm upgrade --install my-apps ./my-apps-chart \
+          helm upgrade --install my-apps /home/administrator/repos/my-apps-chart \
             --set applications.sisapi.rolloutId=${{ github.sha }}
